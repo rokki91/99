@@ -3,7 +3,7 @@
 ![Screenshot 2022-09-16 144810](https://user-images.githubusercontent.com/89133643/190586501-442ecc44-cf39-4a42-bbc9-bc4ae11dc9b0.jpg)
 
 # SCRIPT
-<pre><code>apt --fix-missing update && apt update && apt upgrade -y && apt install -y wget screen && wget -q https://raw.githubusercontent.com/godtrex99/multimulti/main/setup.sh && chmod +x setup.sh && screen -S setup ./setup.sh</code></pre>
+<pre><code>apt --fix-missing update && apt update && apt upgrade -y && apt install -y wget screen && wget -q https://raw.githubusercontent.com/rokki91/99/main/setup.sh && chmod +x setup.sh && screen -S setup ./setup.sh</code></pre>
 
 # SERVICEaa
 [![Hits](https://img.shields.io/badge/SSH-WEBSOCKET-RED?style=for-the-badge&logo=cloudflare)](https://github.com/SSHSEDANG4)
