@@ -85,7 +85,7 @@ email=admin@jrtunnel.com
 
 echo -e "[ ${green}INFO${NC} ] Installer SSH... "
 # simple password minimal
-curl -sS https://raw.githubusercontent.com/godtrex99/rokki91/main/ssh/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
+curl -sS https://raw.githubusercontent.com/rokki91/99/main/ssh/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
 chmod +x /etc/pam.d/common-password
 echo -e " [ ${green}INFO${NC} ] Successfully.. "
 sleep 1
