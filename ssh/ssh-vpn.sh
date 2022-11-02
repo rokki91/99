@@ -6,7 +6,7 @@
 
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/Pedoindo/permission/main/ipmini > /root/tmp
+    curl -sS https://raw.githubusercontent.com/rokki91/99ip/main/ipmini > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -24,7 +24,7 @@ BURIQ () {
 }
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/godtrex99/permission/main/ipmini | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/rokki91/99ip/main/ipmini | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -41,7 +41,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/godtrex99/permission/main/ipmini | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/rokki91/99ip/main/ipmini | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -85,7 +85,7 @@ email=admin@jrtunnel.com
 
 echo -e "[ ${green}INFO${NC} ] Installer SSH... "
 # simple password minimal
-curl -sS https://raw.githubusercontent.com/godtrex99/multimulti/main/ssh/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
+curl -sS https://raw.githubusercontent.com/godtrex99/rokki91/main/ssh/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
 chmod +x /etc/pam.d/common-password
 echo -e " [ ${green}INFO${NC} ] Successfully.. "
 sleep 1
