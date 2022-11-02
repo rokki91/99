@@ -4,7 +4,7 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/godtrex99/permission/main/ipmini > /root/tmp
+    curl -sS https://raw.githubusercontent.com/rokki91/99ip/main/ipmini > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -22,7 +22,7 @@ BURIQ () {
 }
 #https://raw.githubusercontent.com/Pedoindo/permission/main/ipmini 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/godtrex99/permission/main/ipmini | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/rokki91/99ip/main/ipmini | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -39,7 +39,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/godtrex99/permission/main/ipmini | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/rokki91/99ip/main/ipmini | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -320,7 +320,7 @@ if [ ! -f "/etc/log-create-user.log" ]; then
 echo "Log All Account " > /etc/log-create-user.log
 fi
 history -c
-serverV=$( curl -sS https://raw.githubusercontent.com/godtrex99/permission/main/version  )
+serverV=$( curl -sS https://raw.githubusercontent.com/rokki91/99ip/main/version  )
 echo $serverV > /opt/.ver
 aureb=$(cat /home/re_otm)
 b=11
